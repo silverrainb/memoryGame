@@ -25,5 +25,3 @@ Requirements
 * Users should only be able to see at most two cards at a time.
 * Store the lowest-scoring game in local storage, so that players can see a record of the best game played.
 
-
-
