@@ -1,0 +1,178 @@
+body {
+    background: #757F9A;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #D7DDE8, #757F9A);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #D7DDE8, #757F9A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 35px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+#landing {
+    height: 80vh;
+    position: relative;
+}
+
+
+#landing.playing {
+    margin-top: -80vh;
+    transition: margin-top 1s;
+}
+
+#game-container {
+    margin: 1% auto;
+    width: 100vw;
+    max-width: 80vh;
+    height: 100vw;
+    max-height: 80vh;
+}
+
+.row {
+    display: flex;
+}
+
+.game-card-wrapper {
+    margin: 3%;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    flex: 1 0 auto;
+    position: relative;
+}
+
+.game-card-wrapper:after {
+    content: "";
+    float:left;
+    display: block;
+    padding-top: 100%;
+}
+
+.game-card-wrapper:hover {
+    cursor: pointer;
+}
+
+.game-card-wrapper .game-card {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-card {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    /*z-index: 2;*/
+    transition: transform 1s;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transition: 1s;
+
+}
+
+.game-card.flipped {
+    transform: rotateY( 180deg );
+}
+
+.front,
+.back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    backface-visibility: hidden;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.back {
+    transform: rotateY( 180deg );
+}
+
+#current-score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.footer {
+    background-color: dodgerblue;
+    color: white;
+    font-size: 10px;
+    padding: 2px;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.footer a {
+    color: white;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    color: silver;
+}
+
+#end {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-color: rgba(230,230,250, 0.95);
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#end>* {
+    line-height: 0;
+    margin: 25px;
+}
+
+#end.visible {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.8s;
+}
+
+#replay {
+    cursor: pointer;
+    padding: 15px;
+    margin: 10px;
+    background-color: #f0f0ff;
+    border: 1px solid white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px white;
+}
+
+#replay:hover {
+    background-color: #f8f8ff;
+    border: 1px solid white;
+    box-shadow: 0px 0px 5px 1px white;
+}

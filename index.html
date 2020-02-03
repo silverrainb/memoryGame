@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+          crossorigin="anonymous">
+
+    <title>Memory Game</title>
+    <!--    Stylesheet-->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="landing">
+        <h1 class="m-auto p-5"> Memory Game with Doctor Who! <span><img src="https://emojis.slackmojis.com/emojis/images/1567693357/6334/tardis.png?1567693357"></span></h1>
+        <h1 class="lead">BEST SCORE: <span id="best-score"></span> </h1>
+        <div class="d-flex justify-content-center">
+            <button id="start" type="button" class="btn btn-secondary btn-lg mt-3 p-3">START</button>
+        </div>
+    </div>
+
+
+    <div id="game-container" class="invisible">
+        <div class="row">
+                <div class="game-card-wrapper">
+                    <div class="game-card">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </div>
+            </div>
+                <div class="game-card-wrapper">
+                    <div class="game-card">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </div>
+                </div>
+                <div class="game-card-wrapper">
+                    <div class="game-card">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </div>
+                </div>
+                <div class="game-card-wrapper">
+                    <div class="game-card">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </div>
+                </div>
+                <div class="game-card-wrapper">
+                    <div class="game-card">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </div>
+                </div>
+            </div>
+        <div class="row">
+                <div class="game-card-wrapper">
+                    <div class="game-card">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </div>
+                </div>
+                <div class="game-card-wrapper">
+                    <div class="game-card">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </div>
+                </div>
+                <div class="game-card-wrapper">
+                    <div class="game-card">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </div>
+                </div>
+                <div class="game-card-wrapper">
+                    <div class="game-card">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </div>
+                </div>
+                <div class="game-card-wrapper">
+                    <div class="game-card">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </div>
+                </div>
+        </div>
+        <div class="row">
+                <div class="game-card-wrapper">
+                    <div class="game-card">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </div>
+                </div>
+                <div class="game-card-wrapper">
+                    <div class="game-card">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </div>
+                </div>
+            <div class="game-card-wrapper">
+                <div class="game-card score">
+                    <div id="current-score" data-value=0></div>
+                </div>
+            </div>
+                <div class="game-card-wrapper">
+                    <div class="game-card">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </div>
+                </div>
+                <div class="game-card-wrapper">
+                    <div class="game-card">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </div>
+                </div>
+        </div>
+        <div class="row">
+                <div class="game-card-wrapper">
+                    <div class="game-card">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </div>
+                </div>
+                <div class="game-card-wrapper">
+                    <div class="game-card">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </div>
+                </div>
+                <div class="game-card-wrapper">
+                    <div class="game-card">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </div>
+                </div>
+                <div class="game-card-wrapper">
+                    <div class="game-card">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </div>
+                </div>
+                <div class="game-card-wrapper">
+                    <div class="game-card">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </div>
+                </div>
+        </div>
+        <div class="row">
+                <div class="game-card-wrapper">
+                    <div class="game-card">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </div>
+                </div>
+                <div class="game-card-wrapper">
+                    <div class="game-card">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </div>
+                </div>
+                <div class="game-card-wrapper">
+                    <div class="game-card">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </div>
+                </div>
+                <div class="game-card-wrapper">
+                    <div class="game-card">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </div>
+                </div>
+                <div class="game-card-wrapper">
+                    <div class="game-card">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <div id="end" class="invisible">
+        <h3 class="display-4"> <img src = "https://emojis.slackmojis.com/emojis/images/1450448195/158/yay.gif?1450448195"> Yay! Well Done! <img src = "https://emojis.slackmojis.com/emojis/images/1450448195/158/yay.gif?1450448195"> </h3>
+        <div class="score click-count lead">Total Clicks: <span id="num-clicks">0</span></div>
+        <div class="score low-score lead">Low Score: <span id="low-score">0</span></div>
+        <a href="index.html" id="replay" class="btn btn-outline-secondary">Play Again?</a>
+    </div>
+
+
+    <footer>
+        <div class="footer fixed-bottom">
+            <i class="mx-1 far fa-copyright"></i>2020 Coded and Designed<i class="far fa-smile-wink mx-1"></i>by<a href="https://roseejones.github.io/" target="a_blank" class="mx-1">Rose Jones</a>
+        </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
+    <!--JS script-->
+    <script src="memoryCardApp.js"></script>
+</body>
+</html>
